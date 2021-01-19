@@ -24,13 +24,14 @@ async def help(ctx):
 @client.command()
 @commands.cooldown(1, 30, commands.BucketType.user)
 async def rick(ctx):
-    await ctx.channel.send("Never gonna give you up")
-    await ctx.channel.send("Never gonna let you down")
-    await ctx.channel.send("Never gonna run around and desert you")
-    await ctx.channel.send("Never gonna make you cry")
-    await ctx.channel.send("Never gonna say goodbye")
-    await ctx.channel.send("Never gonna tell a lie and hurt you")
-    await ctx.channel.send("Now you gotta wait before I can rickroll again")
+    embed = discord.Embed(title="You now regret this", description="You have to wait to use this again", inline=True)
+    embed.add_field(name="\u200b", value="Never gonna give you up", inline=True)
+    embed.add_field(name="\u200b", value="Never gonna let you down", inline=True)
+    embed.add_field(name="\u200b", value="Never gonna run around and desert you", inline=True)
+    embed.add_field(name="\u200b", value="Never gonna make you cry", inline=True)
+    embed.add_field(name="\u200b", value="Never gonna say goodbye", inline=True)
+    embed.add_field(name="\u200b", value="Never gonna tell a lie and hurt you", inline=True)
+    await ctx.send(embed=embed)
 
 @rick.error
 async def rick_error(ctx, error):
