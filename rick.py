@@ -6,7 +6,7 @@ client=commands.Bot(command_prefix="r?")
 
 client.remove_command("help")
 
-TOKEN = "Nzg4MTQwMDAxOTg4MzEzMDg5.X9fKkw.hy7ELPpK4QJL-ZsLBf7I76ksXsA"
+TOKEN = "No Token 4 U"
 
 @client.event
 async def on_ready():
